@@ -7,5 +7,13 @@
 </head>
 <body>
     <h1>Obteniendo Datos</h1>
+    <p>
+        Nombre:
+        <?php echo $_POST['name'];?>
+    </p>
+    <p>
+        Edad:
+        <?php echo $_POST['age'] ?>
+    </p>
 </body>
 </html>
