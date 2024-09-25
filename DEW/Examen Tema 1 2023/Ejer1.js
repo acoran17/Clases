@@ -25,3 +25,5 @@ console.log(sumaArray([1, 2, [5, 4], 3, 6, [[2, 4], 8, [9, 2, 0, [1]]], 6, [], [
     
 //     return suma;
 // }
+
+//array.flat(array.length);
