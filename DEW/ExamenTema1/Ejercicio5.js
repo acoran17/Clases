@@ -8,10 +8,10 @@
 //     ● (9,8,7,6,5,4,3,2,1,0) devuelve [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 function contarNumeros(...numeros) {
-    console.log(numeros);
-    let comprobacion = "0123456789";
-    let solucion = [0,0,0,0,0,0,0,0,0,0];
-    solucion = numeros.map((n => comprobacion.indexOf(n) ? solucion[n] +=1 : solucion[n] +=0));
+    const solucion = new Array(10).fill(0);
+    for (let i = 0; i < numeros.length; i++) {
+        solucion[numeros[i]]++;      
+    }
     return solucion;
 }
 
