@@ -12,8 +12,8 @@
     <form action="cities.php" method="get">
         <select name="country" id="">
         <?php 
-        foreach ($countries as $country => $value) {
-            printf("<option>%s</option>", $country);
+        foreach ($PROVINCIAS as $idProvincia => $value) {
+            printf("<option>%s</option>", $value);
         }
         ?>
         </select>
