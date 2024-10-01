@@ -7,20 +7,18 @@
 </head>
 <body>
     <?php 
-    $num1 = rand(1,100);
-    echo $num1;
-    $num2 = rand(1,100);
-    echo $num2;
- 
+    $num1;
+    $num2;
+    if(!isset($_GET["resultado"])) { 
     ?>
     
-    <form action="" method="get">
+    <form action="SumaAleatoria.php" method="get">
         <?php
-            echo $num1;
+            echo $num1 = rand(1,100);
         ?>
         +
         <?php 
-            echo $num2; 
+            echo $num2 = rand(1,100); 
         ?>
         =
         <input type="number" name="resultado" id="resultado">
@@ -28,16 +26,14 @@
         <input type="submit" value="comprobar">
     </form>
 
-    <?php 
-        if(isset($_GET["resultado"])) { 
-            $resultado = $_GET["resultado"];
-            if (($num1 + $num2) == $resultado) {
-                echo "El resultado es: CORRECTO! :>";
-            }else {
-                echo "El resultado es: INCORRECTO! :C";
-            }
+    <?php }else{ 
+        $resultado = $_GET["resultado"];
+        if (($num1 + $num2) == $resultado) {
+            echo "El resultado es: CORRECTO! :>";
+        }else {
+            echo "El resultado es: INCORRECTO! :C";
         }
-    ?>
+     } ?>
 
 </body>
 </html>
